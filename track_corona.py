@@ -41,7 +41,7 @@ def get_info_for_country(site_url, site_search_box_xpath, country):
  driver.find_element_by_xpath(site_search_box_xpath).send_keys(country)
  time.sleep(1)  # wait for 1 seconds                               
  #####driver.refresh() #refresh the webpage 
- 
+
  country_name_result_xpath           = "//td[1]"
  total_cases_result_xpath            = "//td[@class='sorting_1']"
  new_cases_xpath                     = "//td[3]"
@@ -66,14 +66,13 @@ def get_info_for_country(site_url, site_search_box_xpath, country):
  titles_values    = [country_name, total_cases, new_cases, total_deaths, new_deaths, total_recovered, serious_critical]
  titles_dictionary = dict(zip(titles_keys, titles_values))
 
- 
- 
+
+
 
  '''
  for input in _inputs:                                                             
      #print attribute name of each input element 
      print(input.get_attribute('name'))
-
  '''
  #driver.close() #->closing
  #driver.quit()
@@ -82,8 +81,6 @@ def get_info_for_country(site_url, site_search_box_xpath, country):
 
 #----------- main Main
 
-
-#site_url = https://www.hokurikugas.co.jp/inquiry2/index.asp
 site_url                          = "https://www.worldometers.info/coronavirus/#countries"
 site_search_box_xpath             = "//input[@class='form-control input-sm']" #
 country                           = "japan"
@@ -141,7 +138,7 @@ for title_key in titles_keys:
  print("------------------------------------------------------------------")
  print("<br>")
  print_txt = str(title_key) + " is: " + titles_values[indexi]
- 
+
  #print(print_txt, str(titles_keys[title_key]))
  print(print_txt)
  print("<br>")
