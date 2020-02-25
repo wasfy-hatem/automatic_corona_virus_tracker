@@ -24,11 +24,6 @@ import sys
 
 def get_info_for_country(site_url, site_search_box_xpath, country):
 
- #site_url = "https://www.hackerearth.com/problems/"
- #driver = webdriver.Opera(executable_path='/home/wasfy/python_progs/crawl_jobs/operadriver_linux64/operadriver')
- # os.getcwd()
- # os.path.join(__location__, 'operadriver')
- #driver = webdriver.Opera(executable_path='/home/wasfy/python_progs/crawl_jobs/opera_driver_2020/operadriver_linux64/operadriver')
  # wc_dir = os.path.dirname(os.path.abspath("__file__"))
  driver = webdriver.Opera(executable_path=os.path.join(os.path.dirname(os.path.abspath("__file__")), 'operadriver'))
 
